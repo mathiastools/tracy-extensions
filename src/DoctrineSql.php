@@ -8,11 +8,10 @@ use Tracy\Debugger;
 use Tracy\IBarPanel;
 
 /**
- * Class DoctrineSql
- *
+ * @author  Matej Erdős
  * @author  MacFJA
  * @license MIT
- * @package MacFJA\Tracy
+ * @see     https://github.com/MacFJA/tracy-doctrine-sql
  */
 class DoctrineSql implements IBarPanel
 {
@@ -20,7 +19,7 @@ class DoctrineSql implements IBarPanel
     private $doctrineConfiguration;
     
     /** @var string The name of the panel (Useful if you watch multiple Doctrine instance) */
-    private $name = '';
+    private $name;
     
     /**
      * Initialize the panel (set a SQL logger)
@@ -34,7 +33,6 @@ class DoctrineSql implements IBarPanel
         $this->doctrineConfiguration = $doctrineConfiguration;
         $this->name = $name;
     }
-    
     
     /**
      * {@inheritDoc}
@@ -97,6 +95,7 @@ class DoctrineSql implements IBarPanel
      * The panel will be attach to the Tracy Debugger Bar.
      *
      * @param EntityManagerInterface $entityManager The doctrine manager to watch
+     * @param string                 $name
      */
     public static function init(EntityManagerInterface $entityManager, $name = '')
     {
@@ -115,6 +114,11 @@ class DoctrineSql implements IBarPanel
         );
     }
     
+    /**
+     * @param mixed $data
+     *
+     * @return string|string[]|null
+     */
     protected function transformNumericType($data)
     {
         $search = [
