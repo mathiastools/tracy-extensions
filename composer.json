@@ -1,0 +1,30 @@
+{
+  "name": "mathiastools/tracy-extensions",
+  "description": "Extensions to Tracy debugger",
+  "license": "MIT",
+  "keywords": [
+    "Tracy",
+    "Debug bar",
+    "Debugbar",
+    "Debugger",
+    "Doctrine DBAL",
+    "Doctrine ORM"
+  ],
+  "authors": [
+    {
+      "name": "Matej Erdős",
+      "email": "matej.erdos@emsolutions.sk",
+      "homepage": "https://www.emsolutions.sk"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0",
+    "tracy/tracy": "^2.5.5",
+    "doctrine/orm": "^2.5.14"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mathiastools\\TracyExtensions\\": "src/"
+    }
+  }
+}
