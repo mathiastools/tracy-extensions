@@ -12,7 +12,7 @@ use Tracy\IBarPanel;
  * Tracy panel is displaying current branch and some more information,
  * inspired by Jakub Vyvážil - https://github.com/nofutur3/tracy-gitpanel
  */
-class Git implements IBarPanel
+class GitPanel implements IBarPanel
 {
     private $protectedBranches = [
         'master',

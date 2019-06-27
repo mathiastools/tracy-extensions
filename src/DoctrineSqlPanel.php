@@ -13,7 +13,7 @@ use Tracy\IBarPanel;
  * @license MIT
  * @see     https://github.com/MacFJA/tracy-doctrine-sql
  */
-class DoctrineSql implements IBarPanel
+class DoctrineSqlPanel implements IBarPanel
 {
     /** @var Configuration The doctrine configuration */
     private $doctrineConfiguration;

@@ -20,7 +20,7 @@ namespace Mathiastools\TracyExtensions;
 
 use Tracy\IBarPanel;
 
-class PhpInfo implements IBarPanel
+class PhpInfoPanel implements IBarPanel
 {
     private $icon;
     
